@@ -1,0 +1,9 @@
+{
+    "duel":{},
+    "episode_name":{
+        "previous_episode": "episode_name",
+        "next_episode": "episode_name",
+        "ending_conditions": [],
+        "rewards": []
+    }
+}

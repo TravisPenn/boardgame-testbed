@@ -1,0 +1,76 @@
+{
+  "blue": [
+    ["surge", "2"],
+    ["damage", "2"],
+    ["damage", "damage", "3"],
+    ["damage", "surge", "3"],
+    ["damage", "damage", "4"],
+    ["damage", "5"]
+  ],
+  "red": [
+    ["damage"],
+    ["damage", "damage"],
+    ["damage", "damage"],
+    ["damage", "damage", "surge"],
+    ["damage", "damage", "damage"],
+    ["damage", "damage", "damage"]
+  ],
+  "yellow": [
+    ["surge"],
+    ["damage", "surge", "surge"],
+    ["damage", "damage", "1"],
+    ["damage", "surge", "1"],
+    ["surge", "2"],
+    ["damage", "2"]
+  ],
+  "green": [
+    ["surge", "1"],
+    ["damage", "surge", "1"],
+    ["damage", "damage", "1"],
+    ["damage", "surge", "2"],
+    ["damage", "damage", "2"],
+    ["damage", "damage", "3"]
+  ],
+  "black": [
+    [
+      "evade"
+    ],
+    [
+      "block"
+    ],
+    [
+      "block"
+    ],
+    [
+      "block", "block"
+    ],
+    [
+      "block", "block"
+    ],
+    [
+      "block", "block", "block"
+    ]
+  ],
+  "white": [
+    [
+      ""
+    ],
+    [
+      "block"
+    ],
+    [
+      "evade"
+    ],
+    [
+      "dodge"
+    ],
+    [
+      "block",
+      "evade"
+    ],
+    [
+      "block",
+      "evade"
+    ]
+  ]
+}

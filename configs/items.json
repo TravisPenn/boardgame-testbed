@@ -1,0 +1,39 @@
+{
+    "weapons":[
+        {
+            "name": "Plasteel Staff",
+            "type": "Staff",
+            "attack_type": "melee",
+            "attack_dice": ["green", "yellow"],
+            "abilities": ["Reach"],
+            "surge": [[1,"Stun"],[1,"damage"]]
+        },
+        {
+            "name": "Infantry Rifle",
+            "type": "Blaster - Rifle",
+            "attack_type": "range",
+            "attack_dice": ["green", "blue"],
+            "abilities": [],
+            "surge": [[1,"Accuracy"],[1,"damage"]]
+        }
+    ],
+    "armor": [
+        {
+            "name": "Black Sun Armor",
+            "type": "Armor",
+            "abilities": [
+                ["Health", 3],
+                ["defending", ["or", ["block"], ["evade"]]]
+            ]
+        }
+    ],
+    "equipment": [
+        {
+            "name": "Smoke Bombs",
+            "type": "Accessory",
+            "abilities": [
+                ["Strain", ["range",3], ["target", "unit"], ["or", ["freind","Hidden"], ["foe", "Weakend"]]]
+            ]
+        }
+    ]
+}

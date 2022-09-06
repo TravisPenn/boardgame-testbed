@@ -1,0 +1,12 @@
+ending_conditions:
+  round_limit: 6
+  imperials:
+    all_rebels_wounded: True
+  rebels:
+    all_imperials_defated: True
+rewards:
+
+additional_rewards:
+  players: "1xp"
+  heros: "100c"
+map_name: "duel.json"
