@@ -1,21 +1,19 @@
+from utilities import *
+import os
+import yaml
 import json
 
 # create an instance of a Piece
 
 def create_piece(pieces, tier, name):
     """
-    
-    :param pieces: json dictionary 
+    :param pieces: dir
     :param tier: str, pieces[]
     :param name: str, pieces[][]
     :return: Piece class object
     """
-    for u in pieces[tier]:
-        if u.get("name") == name:
-            #print(u)
-            return Piece(tier, u)
-        else:
-            return "Piece not found"
+    if name in pieces.keys():
+        return Piece(tier, pieces[name])
 
 
 class Piece:
@@ -23,27 +21,60 @@ class Piece:
         self.tier = tier
         self.name = data["name"]
         self.type = data["type"]
-        self.health = data["health"]
-        self.speed = data["speed"]
-        self.defense_dice = data["defense_dice"]
-        self.abilities = data["abilities"]
         self.status = []
-        if tier == "hero" or tier == "hero_wounded":
-            ## hero & hero_wounded
-            self.endurance = data["endurance"]
-            self.strength = data["strength"]
-            self.insight = data["insight"]
-            self.tech = data["tech"]
+        if tier == "hero":
             self.strain = 0
             self.armor = []
             self.weapon = []
             self.equipment = []
+            self.stats = {
+                "health": data["base"]["health"],
+                "speed" : data["base"]["speed"],
+                "defense_dice" : data["base"]["defense_dice"],
+                "abilities" : data["base"]["abilities"],
+                "endurance" : data["base"]["endurance"],
+                "strength" : data["base"]["strength"],
+                "insight" : data["base"]["insight"],
+                "tech" : data["base"]["tech"]
+            }
+            self.is_wounded = {
+                "health": data["wounded"]["health"],
+                "speed" : data["wounded"]["speed"],
+                "defense_dice" : data["wounded"]["defense_dice"],
+                "abilities" : data["wounded"]["abilities"],
+                "endurance" : data["wounded"]["endurance"],
+                "strength" : data["wounded"]["strength"],
+                "insight" : data["wounded"]["insight"],
+                "tech" : data["wounded"]["tech"]
+            }
         else:
-            self.deployment_groups = data["deployment_groups"]
-            self.reinforcement_cost = data["reinforcement_cost"]
-            self.attack_dice = data["attack_dice"]
             self.attack_range = data["attack_range"]
+            if tier == "standard" :
+                self.stats = {
+                    "deployment_groups" : data["standard"]["deployment_groups"],
+                    "reinforcement_cost" : data["standard"]["reinforcement_cost"],
+                    "attack_dice" : data["standard"]["attack_dice"],
+                    "health" : data["standard"]["health"],
+                    "speed" : data["standard"]["speed"],
+                    "defense_dice" : data["standard"]["defense_dice"],
+                    "abilities" : data["standard"]["abilities"]
+                }
+            if tier == "elite" :
+                self.stats = {
+                    "deployment_groups" : data["elite"]["deployment_groups"],
+                    "reinforcement_cost" : data["elite"]["reinforcement_cost"],
+                    "attack_dice" : data["elite"]["attack_dice"],
+                    "health" : data["elite"]["health"],
+                    "speed" : data["elite"]["speed"],
+                    "defense_dice" : data["elite"]["defense_dice"],
+                    "abilities" : data["elite"]["abilities"]
+                }
 
+
+    def __repr__(self):
+        return yaml.dump(yaml.safe_load(json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)))
+    
 
     def set_hero_weapon(self, weapon):
         """
@@ -65,27 +96,24 @@ class Piece:
         """
         self.armor.append(armor)
     
-    def stats(self):
-        return []
-
+    # def stats(self):
+    #     return []
 
 
 if __name__ == "__main__":
 
-    with open('../configs/pieces.json') as json_file:
-        data = json.load(json_file)
-    pieces = data["pieces"]
 
-    with open('../configs/items.json') as json_file:
-        items = json.load(json_file)
-
-    equiped_weapon = next(item for item in items["weapons"] if item["name"] == "Plasteel Staff")
-
-    #Piece = create_Piece(pieces, "standard", "Stormtrooper")
-    #print(Piece.name, Piece.deployment_groups)
-
-    Piece = create_piece(pieces, "hero", "Diala Passil")
+    pieces, items, abilities = load_configs(selection=selection)
+    #print(pieces)
+    
+    equiped_weapon = next(items[item] for item in items if items[item]["name"] == "Plasteel Staff")
+    #print(equiped_weapon)
+    
+    # Piece = create_piece(pieces, "standard", "stormtrooper")
+    # print(Piece.tier, Piece.name, Piece.stats)
+    
+    Piece = create_piece(pieces, "hero", "diala_passil")
     Piece.set_hero_weapon(equiped_weapon)
-    print(Piece.name, Piece.weapon[0]["attack_type"])
-
+    #print(Piece.name, Piece.weapon[0], Piece.stats)
+    print(Piece)
 

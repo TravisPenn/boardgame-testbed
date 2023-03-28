@@ -1,0 +1,8 @@
+name: "Squad Training"
+reward:
+  - "reroll 1 attack_dice"
+text: "While attacking, while adjacent to another friendly TROOPER, you may reroll 1 attack die"
+requirements:
+  - "adjacent"
+  - "friendly"
+  - "TROOPER"

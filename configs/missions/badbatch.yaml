@@ -1,0 +1,32 @@
+name: "Aftermath"
+ending_conditions: 
+  round_limit: 6
+  imperials:
+    all_rebels_wounded: True
+  rebels:
+    all_imperials_defated: True
+rewards: 
+  - heros: 
+  - non-heros:
+deployment_groups:
+  - # wild animals
+  - # secirty droids
+additional_rewards:
+  players: "1xp"
+  heros: "100c"
+map_name: "duel.json"
+---
+name: "Cut And Run"
+ending_conditions: []
+rewards: []
+map: []
+---
+name: "Replacements"
+ending_conditions: []
+rewards: []
+map: []
+---
+name: "Cornerad"
+ending_conditions: []
+rewards: []
+map: []

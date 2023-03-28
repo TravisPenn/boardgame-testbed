@@ -33,6 +33,8 @@ def display_map(map, map_name): #, pieces):
 
   #cell_text = [["John", "23", "98", "234"], ["James", "24", "90", "239"]]
 
+  plt.ion()
+
   fig, ax = plt.subplots()
 
   the_table = ax.table(
@@ -48,8 +50,9 @@ def display_map(map, map_name): #, pieces):
   plt.rcParams["figure.autolayout"] = True
   plt.xticks([])
   plt.yticks([])
-  plt.title(map_name) 
-  plt.pause(3)
+  plt.title(map_name)
+  fig.canvas.draw()
+  fig.canvas.flush_events()
 
 def close_map():
   plt.close('all')

@@ -1,0 +1,7 @@
+name: "Foresight"
+hero:
+  cost: 
+    - "strain"
+  reward:
+    - "reroll"
+    - "defense_dice"

@@ -1,0 +1,9 @@
+name: "Black Sun Armor"
+class: "armor"
+type: "Armor"
+abilities:
+    - health: 3
+    - defending: true
+      or: 
+        block: 1
+        evade: 1

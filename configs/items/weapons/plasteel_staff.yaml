@@ -1,0 +1,12 @@
+name: "Plasteel Staff"
+class: "weapon"
+type: "Staff"
+attack_type: "melee"
+attack_dice: 
+  - "green"
+  - "yellow"
+abilities: 
+  - "Reach"
+surge: 
+  - stun: 1 
+  - damage: 1

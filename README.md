@@ -6,7 +6,7 @@ Set any configs in the `configs/`
 Modules are in `arena/`
 
 ```
-cd area
+cd arena
 
 # main run is dual.py
 python3 duel.py

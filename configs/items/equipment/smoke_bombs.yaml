@@ -1,0 +1,10 @@
+name: "Smoke Bombs"
+class: "equipment"
+type: "Accessory"
+abilities:
+    - Strain: 1
+      range: 3
+    - target: "unit" 
+    - or: 
+        freind: "Hidden"
+        foe: "Weakend"

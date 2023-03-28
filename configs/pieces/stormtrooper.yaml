@@ -1,0 +1,51 @@
+name: "Stormtrooper"
+type: "trooper"
+tier: "non-hero"
+attack_range: true
+elite:
+  deployment_cost: 9
+  deployment_groups: 3
+  reinforcement_cost: 3
+  health: 5
+  speed: 4
+  defense_dice:
+    - "black"
+  attack_dice:
+    - "blue"
+    - "green"
+  abilities:
+    - cost:
+        surge: 1
+      reward:
+        damage: 2
+    - cost:
+        surge: 1
+      reward:
+        accuracy: 3
+    - reward:
+        - "reroll 1 attack_dice"
+      text: "Squad Training: While attacking, while adjacent to another friendly TROOPER, you may reroll 1 attack die"
+    - text: "Last Stand: When you are defeated, choose another figure in your group. That figure becomes Focused."
+standard:
+  deployment_cost: 6
+  deployment_groups: 3
+  reinforcement_cost: 2
+  health: 3
+  speed: 4
+  defense_dice:
+    - "black"
+  attack_dice:
+    - "blue"
+    - "green"
+  abilities:
+    - cost:
+        surge: 1
+      reward:
+        damage: 1
+    - cost:
+        surge: 1
+      reward:
+        accuracy: 2
+    - reward:
+        - "reroll 1 attack_dice"
+      text: "Squad Training: While attacking, while adjacent to another friendly TROOPER, you may reroll 1 attack die"

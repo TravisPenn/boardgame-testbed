@@ -1,0 +1,130 @@
+name: "Bad Batch"
+order:
+ - title: "Aftermath"
+   season: 1
+   episode: 1
+   desription: "Returning to Kamino, the Bad Batch learns that the war is over and that an Empire has replaced the Republic. Admiral Tarkin arrives to evaluate the clones' viability and sends the Bad Batch to eliminate a group of insurgents on Onderon."
+ - title: "Cut and Run"
+   season: 1
+   episode: 2
+   desription: ""
+ - title: "Replacements"
+   season: 1
+   episode: 3
+   desription: ""
+ - title: "Cornered"
+   season: 1
+   episode: 4
+   desription: ""
+ - title: "Rampage"
+   season: 1
+   episode: 5
+   desription: ""
+ - title: "Decommissioned"
+   season: 1
+   episode: 6
+   desription: ""
+ - title: "Battle Scars"
+   season: 1
+   episode: 7
+   desription: ""
+ - title: "Reunion"
+   season: 1
+   episode: 8
+   desription: ""
+ - title: "Bounty Lost"
+   season: 1
+   episode: 9
+   desription: ""
+ - title: "Common Ground"
+   season: 1
+   episode: 10
+   desription: ""
+ - title: "Devil's Deal"
+   season: 1
+   episode: 11
+   desription: ""
+ - title: "Rescue on Ryloth"
+   season: 1
+   episode: 12
+   desription: ""
+ - title: "Infested"
+   season: 1
+   episode: 13
+   desription: ""
+ - title: "War-Mantle"
+   season: 1
+   episode: 14
+   desription: ""
+ - title: "Return to Kamino"
+   season: 1
+   episode: 15
+   desription: ""
+ - title: "Kamino Lost"
+   season: 1
+   episode: 16
+   desription: ""
+ - title: "Spoils of War"
+   season: 2
+   episode: 17
+   desription: ""
+ - title: "Ruins of War"
+   season: 2
+   episode: 18
+   desription: ""
+ - title: "The Solitary Clone"
+   season: 2
+   episode: 19
+   desription: ""
+ - title: "Faster"
+   season: 2
+   episode: 20
+   desription: ""
+ - title: "Entombed"
+   season: 2
+   episode: 21
+   desription: ""
+ - title: "Tribe"
+   season: 2
+   episode: 22
+   desription: ""
+ - title: "The Clone Conspiracy"
+   season: 2
+   episode: 23
+   desription: ""
+ - title: "Truth and Consequences"
+   season: 2
+   episode: 24
+   desription: ""
+ - title: "The Crossing"
+   season: 2
+   episode: 25
+   desription: ""
+ - title: "Retrieval"
+   season: 2
+   episode: 26
+   desription: ""
+ - title: "Matamorphosis"
+   season: 2
+   episode: 27
+   desription: ""
+ - title: "The Outpost"
+   season: 2
+   episode: 28
+   desription: ""
+ - title: "Pabu"
+   season: 2
+   episode: 29
+   desription: ""
+ - title: "Tipping Point"
+   season: 2
+   episode: 30
+   desription: ""
+ - title: "The Summit"
+   season: 2
+   episode: 31
+   desription: ""
+ - title: "Plan 99"
+   season: 2
+   episode: 32
+   desription: ""

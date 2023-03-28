@@ -1,0 +1,35 @@
+{
+  "types": {
+    "blue": [1,2,3,3,4,5],
+    "green": [14,13,12,15,16,3],
+    "red": [6,7,7,8,9,9],
+    "yellow": [10,11,12,13,1,2],
+    "black": [18,20,20,21,21,22],
+    "white": [0,20,18,17,19,19]
+  },
+  "faces": {
+     "0": [""],
+     "1": [ "surge", "2" ],
+     "2": [ "damage", "2" ],
+     "3": [ "damage", "damage", "3" ],
+     "4": [ "damage", "damage", "4" ],
+     "5": [ "damage", "5" ],
+     "6": [ "damage" ],
+     "7": [ "damage", "damage" ],
+     "8": [ "damage", "damage", "surge" ],
+     "9": [ "damage", "damage", "damage" ],
+     "10": [ "surge" ],
+     "11": [ "damage", "surge", "surge" ],
+     "12": [ "damage", "damage", "1" ],
+     "13": [ "damage", "surge", "1" ],
+     "14": [ "surge", "1" ],
+     "15": [ "damage", "surge", "2" ],
+     "16": [ "damage", "damage", "2" ],
+     "17": [ "dodge" ],
+     "18": [ "evade" ],
+     "19": [ "block", "evade" ],
+     "20": [ "block" ],
+     "21": [ "block", "block" ],
+     "22": [ "block", "block", "block" ]
+  }
+}

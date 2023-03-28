@@ -5,12 +5,22 @@ import re
 def containsNumber(value):
     return bool(re.findall('[0-9]+', value))
 
+
 def rollAllDice(dice: list) -> list:
     outcome = []
-    with open('../configs/dice.json') as json_file:
+    pool = {}
+
+    with open('../configs/dice/imperial_assault.json') as json_file:
         data = json.load(json_file)
+        for t in data['types']:
+            faces = []
+            for f in data['types'][t]:
+                faces.append(data['faces'].get(str(f)))
+            pool[t] = faces
+            
     for die in dice:
-        outcome.append((die, random.choice(data[die])))
+        outcome.append((die, random.choice(pool[die])))
+
     return outcome
 
 
@@ -74,6 +84,8 @@ def resolveAttackRoll(outcome: list) -> dict:
 if __name__ == "__main__":
 
     dice = ["blue","blue","green","white"]
+
+    #print(rollAllDice(dice))
 
     print("Attack/Def:")
     print(resolveAttackRoll(rollAllDice(dice)))

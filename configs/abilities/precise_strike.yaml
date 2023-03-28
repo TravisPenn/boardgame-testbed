@@ -1,0 +1,10 @@
+name: "Precise Strike"
+weapon_type: melee
+activation_limit: 1
+reward:
+  defender:
+    defense_dice: -1
+hero:
+  cost: 
+    strain: 2
+    

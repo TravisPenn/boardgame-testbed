@@ -1,0 +1,38 @@
+name: "Diala Passil"
+type: "Haunted Exile"
+tier: "hero"
+base:
+  health: 12
+  endurance: 5
+  speed: 4
+  defense_dice:
+    - "white"
+  strength:
+    - "blue"
+    - "green"
+  insight:
+    - "blue"
+    - "green"
+    - "yellow"
+  tech:
+    - "blue"
+  abilities:
+    - "Precise Strike"
+    - "Foresight"
+wounded:
+  health: 12
+  endurance: 4
+  speed: 3
+  defense_dice:
+    - "white"
+  strength:
+    - "blue"
+    - "red"
+  insight:
+    - "blue"
+    - "green"
+    - "red"
+  tech:
+    - "red"
+  abilities:
+    - "Foresight"

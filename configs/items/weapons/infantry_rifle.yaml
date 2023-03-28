@@ -1,0 +1,10 @@
+name: "Infantry Rifle"
+class: "weapon"
+type: "Blaster - Rifle"
+attack_type: "range"
+attack_dice: 
+  - green
+  - blue
+surge: 
+  - Accuracy: 1
+  - damage: 1

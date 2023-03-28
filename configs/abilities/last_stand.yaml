@@ -1,0 +1,17 @@
+name: "Last Stand"
+trigger: 
+  - "defeated"
+target:
+  - "figure"
+  - "same"
+  - "group"
+effect:
+  - "Focused"
+hero:
+  trigger: 
+    - "wounded"
+  target:
+    - "friendly"
+    - "figure"
+  effect:
+    - "Focused"

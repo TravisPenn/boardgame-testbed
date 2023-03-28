@@ -5,25 +5,32 @@ from dice_roller import *
 from board import *
 from actions import *
 from display import *
+from utilities import *
 import json
+  
 
-# Load Pieces
-with open('../configs/pieces.json') as json_file:
-    data = json.load(json_file)
-pieces = data["units"]
+# Load configs ############################
+selection = {
+    "pieces": ["diala_passil", "stormtrooper"],
+    "items": {
+        "weapons": ["plasteel_staff", "infantry_rifle"],
+        "armor": ["black_sun_armor"]
+    },
+    "abilities": ["foresight", "precise_strike"]
+}
 
-# Load Items
-with open('../configs/items.json') as json_file:
-    items = json.load(json_file)
+pieces, items, abilities = load_configs(selection=selection)
+
+#########################################
 
 # Equip Units
-equiped_weapon = next(item for item in items["weapons"] if item["name"] == "Plasteel Staff")
+equiped_weapon = next(items[item] for item in items if items[item]["name"] == "Plasteel Staff")
 
 # Create Units for duel
-Piece_1 = create_piece(pieces, "hero", "Diala Passil")
+Piece_1 = create_piece(pieces, "hero", "diala_passil")
 Piece_1.set_hero_weapon(equiped_weapon)
 
-Piece_2 = create_piece(pieces, "elite", "Stormtrooper")
+Piece_2 = create_piece(pieces, "elite", "stormtrooper")
 
 # Load Mission
 
@@ -162,5 +169,5 @@ while running:
     # empty depleted list
     # empty defeated list
     # empty exhausted list
-close_map()
+    close_map()
 
