@@ -10,6 +10,7 @@ selection = {
     "abilities": ["foresight", "precise_strike"]
 }
 
+
 def load_configs(selection):
     pieces = {}
     items = {}
@@ -54,7 +55,6 @@ def import_yaml_files(directory):
                     name = filepath.rsplit('/')[-2]
                     yaml_data.setdefault(name,[]).append(yaml.safe_load(file))
     return yaml_data
-
 
 
 

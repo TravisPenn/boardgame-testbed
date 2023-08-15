@@ -10,7 +10,7 @@ rewards:
   - non-heros:
 deployment_groups:
   - # wild animals
-  - # secirty droids
+  - # security droids
 additional_rewards:
   players: "1xp"
   heros: "100c"

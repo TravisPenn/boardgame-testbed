@@ -33,5 +33,3 @@ Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" fo
 
 ## TODO
 - Clean up requirements.txt
-- Move from json to yaml for configs of pieces and items
-    - allows for ease of creation for users

@@ -1,0 +1,17 @@
+name: "string"
+reward:
+  defender:
+  attacker:
+text: "string"
+weapon_type: "string" # melee/ranged
+activation_limit: int
+triggers:
+  
+target:
+effect:
+requirements:
+cost:
+hero:
+  cost:
+  
+  

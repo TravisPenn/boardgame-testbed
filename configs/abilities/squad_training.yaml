@@ -3,6 +3,9 @@ reward:
   - "reroll 1 attack_dice"
 text: "While attacking, while adjacent to another friendly TROOPER, you may reroll 1 attack die"
 requirements:
-  - "adjacent"
-  - "friendly"
-  - "TROOPER"
+  1: 
+    - "adjacent" # -> range on the map(center of the search is this figure, adjacent) -> 3x3 map_slice
+    - "friendly" # -> within the map_slice, what are the friendly figures?
+    - "TROOPER"  # -> within the map_slice, if figures is friendly, is it trooper?
+  2:
+    - "named Commander is on the field" # -> look at all peices for name

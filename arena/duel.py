@@ -27,10 +27,10 @@ pieces, items, abilities = load_configs(selection=selection)
 equiped_weapon = next(items[item] for item in items if items[item]["name"] == "Plasteel Staff")
 
 # Create Units for duel
-Piece_1 = create_piece(pieces, "hero", "diala_passil")
+Piece_1 = create_piece(pieces, "hero", "hero", "diala_passil")
 Piece_1.set_hero_weapon(equiped_weapon)
 
-Piece_2 = create_piece(pieces, "elite", "stormtrooper")
+Piece_2 = create_piece(pieces, "nonhero", "elite", "stormtrooper")
 
 # Load Mission
 
@@ -45,8 +45,8 @@ map1 = [
     [ [], [], [], [], [], [], [], [], [], [], [], [], []],
     [ [], [], [], [], [], [], [], [], [], [], [], [], []],
     [[0], [], [], [], [], [], [], [], [], [], [], [],[0]],
-    [[0], [], [], [2],[], [], [], [], [], [], [], [],[0]],
-    [[0],[0], [], [], [], [], [], [], [], [], [],[0],[0]],
+    [[0], [], [3], [2],[], [], [], [], [], [], [], [],[0]],
+    [[0],[0], [], [], [4], [], [], [], [], [], [],[0],[0]],
     [[0],[0],[0], [], [], [], [], [], [], [],[0],[0],[0]],
     [[0],[0],[0],[0],[0], [], [], [],[0],[0],[0],[0],[0]]
 ]
@@ -57,7 +57,7 @@ map1 = [
 
 # Setup board
 map = board(map1)
-pieces = [(1, Piece_1),(2, Piece_2)]
+pieces = [(1, Piece_1),(2, Piece_2),(3, Piece_2),(4, Piece_2)]
 
 # Mission perams
     # Ending conditions
@@ -80,12 +80,13 @@ while running:
     print("-------------------------------------")
     print("Start of Round {0}".format(roundcount))
     print("-------------------------------------")
-
+    
+    map_name="Duel"
     # ready Piece.hero Class & Item cards
-    display_map(map=map.board, map_name="Duel")
+    display_map(map=map.board, map_name=map_name)
     # Round loop
     for piece in pieces:
-        piece_location = piece[0]
+        piece_map_id = piece[0]
         piece = piece[1]
         print("-------------------------------------")
         print("** {0}'s Turn **".format(piece.name))
@@ -124,23 +125,24 @@ while running:
 
             ## Execute Action
             if action == "move":
-                move(map, piece, piece_location)
+                # map, piece = 
+                move(map, piece, piece_map_id)
                 #### movement pool
                 # if move
                 # init Piece speed
                 # subtract from movement pool to move()
 
             if action == "attack":
-                attack(map, piece, piece_location)
+                attack(map, piece, piece_map_id) # need dice
 
             if action == "interact":
-                interact(map, piece, piece_location)
+                interact(map, piece, piece_map_id) # need dice
 
             if action == "rest":
                 rest(piece)
 
             if action == "special":
-                special(map, piece, piece_location)
+                special(map, piece, piece_map_id)
 
     # End Mission
         # Ending conditions

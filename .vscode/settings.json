@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/yamllint.json": "file:///Users/mymac/Documents/blackbox/boardgame-testbed/configs/abilities/template.yaml"
+    }
+}

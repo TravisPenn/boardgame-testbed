@@ -5,6 +5,6 @@ reward:
   defender:
     defense_dice: -1
 hero:
-  cost: 
+  cost:
     strain: 2
     
